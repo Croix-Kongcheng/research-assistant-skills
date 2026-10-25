@@ -8,10 +8,29 @@ from __future__ import annotations
 import re
 import sys
 from pathlib import Path
+from urllib.parse import unquote
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def has_machine_path(content: str) -> bool:
+    # Public documentation URLs such as matplotlib.org/stable/users/explain/
+    # are not personal filesystem paths.
+    local_text = re.sub(r"https?://[^\s<>\])]+", "URL", content, flags=re.I)
+    return bool(re.search(r"(?i)(?<![\w])[a-z]:[\\/]|file://|/(?:Users|home)/[\w.-]+/", local_text))
+
+
+def local_targets(markdown: str):
+    """Inspect real Markdown links and images, excluding illustrative code."""
+    for target in re.findall(r"\[[^\]\n]*\]\(([^)\n]+)\)", prose(markdown)):
+        target = target.strip()
+        if target.startswith("<"):
+            target = target[1:target.index(">")]
+        if re.match(r"[a-z][a-z0-9+.-]*:", target, re.I) or target.startswith("#"):
+            continue
+        yield unquote(target.split("#", 1)[0])
 
 
 def prose(markdown: str) -> str:
@@ -61,7 +80,7 @@ def check() -> list[str]:
             allowed = {"name", "description", "license", "allowed-tools", "metadata"}
             if set(metadata) - allowed:
                 errors.append(f"{folder.name}: unsupported frontmatter fields")
-            if metadata.get("license") == "MIT" and not (folder / "LICENSE").is_file():
+            if metadata.get("license") and not (folder / "LICENSE").is_file():
                 errors.append(f"{folder.name}: independent distribution is missing LICENSE")
         shared_copy = folder / "references/workspace-config.md"
         if shared_copy.exists() and shared_copy.read_bytes() != shared:
@@ -83,16 +102,12 @@ def check() -> list[str]:
             content = path.read_text(encoding="utf-8-sig")
             rel = path.relative_to(ROOT)
             # A packaged skill must not point to one machine's real home or drive.
-            if re.search(r"(?i)(?<![\w])[a-z]:[\\/]|file://|/(?:Users|home)/[\w.-]+/", content):
+            if has_machine_path(content):
                 errors.append(f"{rel}: machine-specific absolute path")
             if re.search(r"\[TODO:|\[INSERT(?:\s|_)|\bPLACEHOLDER_DESCRIPTION\b", content, re.I):
                 errors.append(f"{rel}: unfinished scaffold")
-            for target in re.findall(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)", prose(content)):
-                target = target.strip().strip("<>")
-                if re.match(r"[a-z][a-z0-9+.-]*:", target, re.I) or target.startswith("#"):
-                    continue
-                resource = target.split("#", 1)[0]
-                resolved = (path.parent / resource).resolve()
+            for target in local_targets(content):
+                resolved = (path.parent / target).resolve()
                 if not resolved.is_relative_to(folder.resolve()):
                     errors.append(f"{rel}: runtime resource escapes skill folder: {target}")
                 elif not resolved.is_file():
@@ -105,11 +120,16 @@ def check() -> list[str]:
             errors.append(f"Example configuration: invalid paths.{key}")
     if not isinstance(config.get("topics"), dict):
         errors.append("Example configuration: topics must be a mapping")
-    for path in [ROOT / "README.md", ROOT / "CONTRIBUTING.md", ROOT / "docs/configuration.md"]:
-        for target in re.findall(r"(?<!!)\[[^\]\n]+\]\(([^)\n]+)\)", prose(path.read_text(encoding="utf-8"))):
-            if re.match(r"[a-z][a-z0-9+.-]*:", target, re.I) or target.startswith("#"):
-                continue
-            if not (path.parent / target.split("#", 1)[0]).is_file():
+    documentation = [*ROOT.glob("*.md"), *(ROOT / "docs").rglob("*.md"), *(ROOT / "examples").rglob("*.md")]
+    for path in documentation:
+        content = path.read_text(encoding="utf-8-sig")
+        if has_machine_path(content):
+            errors.append(f"{path.relative_to(ROOT)}: machine-specific absolute path")
+        for target in local_targets(content):
+            resolved = (path.parent / target).resolve()
+            if not resolved.is_relative_to(ROOT.resolve()):
+                errors.append(f"{path.relative_to(ROOT)}: documentation link escapes repository: {target}")
+            elif not resolved.is_file():
                 errors.append(f"{path.relative_to(ROOT)}: missing documentation link: {target}")
     print(f"Checked {len(skills)} skills, packaged references, UI metadata and workspace configuration.")
     return errors

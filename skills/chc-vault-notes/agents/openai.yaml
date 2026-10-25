@@ -1,4 +1,4 @@
 interface:
   display_name: "科研笔记写作与整理"
   short_description: "按使用者的实际目录创建与审校自然清晰的科研、学习和项目笔记"
-  default_prompt: "请用 $chc-vault-notes 按我的目标工作区、写作偏好和实际材料整理并保存笔记，保留关键图片、公式、来源与文末生成信息。"
+  default_prompt: "请用 $chc-vault-notes 按我的目标工作区、写作偏好和实际材料整理并保存笔记，保留关键图片、公式、来源与文末生成信息，适合讲解时联网查找有明确来源和许可的图片并保存插入。"

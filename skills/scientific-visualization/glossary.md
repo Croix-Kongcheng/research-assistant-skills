@@ -1,0 +1,46 @@
+# Glossary
+
+- **Affine transform** — Linear mapping plus translation, composable for scale, rotation, shear, and displacement (2).
+- **Alpha compositing** — Combining foreground/background colors according to opacity; the result depends on layering (5, 12).
+- **Artist** — A drawable Matplotlib object, including containers and primitives (1).
+- **Axes** — A plotting region containing data marks and associated axes (1).
+- **Axes coordinates** — Fractions of the axes box; `(0, 0)` is bottom-left and `(1, 1)` top-right (2).
+- **Axis** — An object managing one coordinate direction's ticks, labels, and scale (1).
+- **Backend** — Rendering machinery with an optional interface for interaction (1).
+- **Blended transform** — A transform using different separable coordinate systems in x and y (2).
+- **Blue noise** — A spatial distribution with reduced close clustering; Poisson-disk sampling enforces minimum separation (13, showcases).
+- **Chartjunk** — Visual material that adds confusion or no useful information to the figure's message (6).
+- **Clipping** — Restricting an artist's visible region; distinct from computing reusable polygon intersections (13).
+- **Collection** — An artist batching many related marks, such as segments or polygons (12, 13).
+- **Color model** — A coordinate scheme for describing colors, such as RGB or HSV (5).
+- **Color space** — The domain and interpretation of colors available under a specified system, such as sRGB (5).
+- **Colormap** — A mapping from normalized values or indices to colors (5).
+- **Cyclic colormap** — A map whose endpoints join for periodic quantities (5).
+- **Data aspect** — Display scaling of y units relative to x units; different from panel box aspect (8).
+- **Data coordinates** — Coordinates in the plotted variables' units before display transformation (2).
+- **Diverging colormap** — Two color progressions around a meaningful central value (5).
+- **DPI** — Dots per inch; controls raster pixel count at a physical figure size (1).
+- **Figure** — The outer container for axes and other figure artists (1).
+- **Figure coordinates** — Fractions of the full figure rectangle (2).
+- **Frustum** — The camera's clipped viewing volume (11).
+- **Glyph** — A rendered character shape within a typeface (4).
+- **GridSpec** — A layout grid whose slices allocate axes regions with controllable ratios and spans (8).
+- **Homogeneous coordinates** — An added coordinate enabling translations/projections as matrix operations (11).
+- **MathText** — Matplotlib's built-in mathematical text parsing and rendering system (4).
+- **Model-view-projection** — Decomposition of local positioning, camera-relative placement, and projection (11).
+- **Normalization** — Mapping numeric values to the colormap's input interval (5).
+- **Orthographic projection** — Projection with parallel viewing rays and no distance-based apparent-size reduction (11).
+- **Painter's algorithm** — Back-to-front drawing using an approximate depth ordering (11).
+- **Perspective projection** — Projection with apparent size depending on distance from a camera (11).
+- **Point** — A physical unit of 1/72 inch in Matplotlib; scatter `s` is measured in squared points (1, 4, 12).
+- **Projection** — A mapping that may couple dimensions to represent coordinates in the output plane (3).
+- **Qualitative palette** — Distinct category colors without an intended ordering (5).
+- **Rasterization** — Converting chosen artists to pixels, including inside an otherwise vector output (12).
+- **rcParams** — Matplotlib's runtime configuration values (7).
+- **Scale** — A separable transformation along one axis dimension (3).
+- **Sequential colormap** — Ordered color progression for low-to-high magnitude (5).
+- **Spine** — A line marking an axes boundary, independently positionable or hideable (1, 7).
+- **TextPath** — Glyph outlines represented as path geometry for transformations beyond ordinary Text (4).
+- **TwoSlopeNorm** — Normalization mapping a chosen data center to 0.5 with separately scaled lower/upper spans (5).
+- **Vector output** — Geometry-based marks that retain detail under scaling; rasterized sublayers remain pixel based (1, 12).
+- **Z-order** — Drawing order among artists; different from a full 3D visibility solution (1, 11).

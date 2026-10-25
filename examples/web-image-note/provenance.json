@@ -1,0 +1,62 @@
+{
+  "example": "chc-vault-notes web image insertion",
+  "created_at": "2026-10-25T21:55:32+08:00",
+  "timezone": "Asia/Shanghai",
+  "model": "未知（当前环境未提供可确认的模型标识）",
+  "source": {
+    "title": "Dijkstra algorithm 3.svg",
+    "author": "Willprice",
+    "author_url": "https://commons.wikimedia.org/wiki/User:Willprice",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Dijkstra_algorithm_3.svg",
+    "source_page_revision_url": "https://commons.wikimedia.org/w/index.php?title=File:Dijkstra_algorithm_3.svg&oldid=498445953",
+    "declared_creation_date": "2013-01-03",
+    "verified_date": "2026-10-25",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+  },
+  "technical_reference": "https://networkx.org/documentation/stable/reference/algorithms/shortest_paths.html",
+  "assets": [
+    {
+      "path": "attachments/Dijkstra_algorithm_3.svg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Dijkstra_algorithm_3.svg",
+      "bytes": 20592,
+      "sha256": "6f4c3fcfcc9d0f3e2b06c291eaabfa109c2c52346837f95b80dbc7960c83e8ab",
+      "asset_type": "original SVG",
+      "modifications": "none; downloaded bytes retained unchanged",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "path": "attachments/Dijkstra_algorithm_3-preview.png",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Dijkstra_algorithm_3.svg/1280px-Dijkstra_algorithm_3.svg.png",
+      "bytes": 82289,
+      "sha256": "294e9efdcb05e4b0654621c1c0357dd1d55f4cfa4524a6036c53c987b435b691",
+      "asset_type": "Wikimedia-generated PNG preview",
+      "modifications": "none; downloaded bytes retained unchanged",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+    }
+  ],
+  "verification": {
+    "actual_image_viewed": "Wikimedia 1280px PNG preview of the original SVG",
+    "image_dimensions_px": [
+      1280,
+      452
+    ],
+    "checked_labels": [
+      "S=0",
+      "P=2",
+      "U=3",
+      "P-X edge=4",
+      "U-X edge=1"
+    ],
+    "manual_teaching_arithmetic": [
+      "2+4=6",
+      "3+1=4"
+    ],
+    "shortest_path_code_executed": false,
+    "full_shortest_path_run_claimed": false,
+    "target_editor_rendering_checked": false
+  },
+  "original_text_license": "MIT"
+}

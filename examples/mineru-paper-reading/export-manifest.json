@@ -1,0 +1,625 @@
+{
+  "schema_version": 1,
+  "exported_at": "2026-10-25 21:56:08 (Asia/Shanghai, UTC+08:00)",
+  "export_model": "GPT-6; exact model ID unavailable",
+  "operation": "Copy existing skill-produced notes and adapt for public GitHub display. Not a new full-paper reading or experiment reproduction.",
+  "counts": {
+    "paper_notes": 14,
+    "knowledge_notes": 20,
+    "original_teaching_images": 4,
+    "omitted_third_party_images": 21
+  },
+  "source_identification": "Original filenames and SHA-256 only; no author-computer locations included.",
+  "notes": [
+    {
+      "original_note_name": "00.总览与阅读顺序.md",
+      "original_sha256": "414679aea5406924fc57d63127a6edc45bc5e2e839f3c706c69387548fc35f7b",
+      "export_path": "paper/00.总览与阅读顺序.md",
+      "export_sha256": "ecf0ee58d0b73ea336182d896d189b0fe27afcd9f416d324b7701d48e7695ed8",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "01.摘要引言与恢复框架.md",
+      "original_sha256": "b7d3e53a46a4c1b2733dd2c4aca841b097555b478bd77aa7179e71fdf27fa936",
+      "export_path": "paper/01.摘要引言与恢复框架.md",
+      "export_sha256": "c9a1ffb3c91f4b0815482f506cd818754583e280a3f7aecb71e3b631bc8ebdb3",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "02.符号总表与建模约定.md",
+      "original_sha256": "99680684c5c0a9c91260ab69fa560dfef8ae57498b9cb47c4b14e11566f03d8e",
+      "export_path": "paper/02.符号总表与建模约定.md",
+      "export_sha256": "1cf2690bdd15de593cf2e23e49422b3e18c43e6eb33bfa35a803277674b6fc3c",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "03.目标函数与潮流约束.md",
+      "original_sha256": "299b9d2d8b51324d190818dcf5d2d93877ccd00bbda4768f90e9dd0a452b6e9f",
+      "export_path": "paper/03.目标函数与潮流约束.md",
+      "export_sha256": "e7e6e6808e87f29b254638a5b08b6636ab7bf765f8dd1b5388d0d9b867606bbe",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "04.辐射状拓扑与虚拟潮流.md",
+      "original_sha256": "ea0a9a3284ca58ae4b6bb6a29c5f57a102865b5849452bfb3549007edb170388",
+      "export_path": "paper/04.辐射状拓扑与虚拟潮流.md",
+      "export_sha256": "a06a981df5d64ba6d4052a4e5b0b182379c514abaa2ff16e918564c29d03eb41",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "05.MESS路径与充放电调度.md",
+      "original_sha256": "74734d23ff6b77bd1616ed369b6042c4317eb88ddba0fd04e3e9a415b321d3ef",
+      "export_path": "paper/05.MESS路径与充放电调度.md",
+      "export_sha256": "902d73e21173f119084f6bdac38855d97541c258bb2370c07e9289e8543356ec",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "06.通信依赖与路径连通表达.md",
+      "original_sha256": "a150a5fc590aa70940ed4c37e55e153740544170d21ab83bb24c3148f8f8adc7",
+      "export_path": "paper/06.通信依赖与路径连通表达.md",
+      "export_sha256": "294edefb03de3aae6f45dfe101dbf59d58080cd08d979cdaa8d4c757fe437b5c",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "07.UAV路径与能量调度.md",
+      "original_sha256": "4c6f9ae2f7701db6570afd1bee39ba5606ae1fa30cbf6c51937e2c861256b017",
+      "export_path": "paper/07.UAV路径与能量调度.md",
+      "export_sha256": "fb4651f91c2c769296eec473eccbe924d80c228bdebaba86f56f3fad7633831c",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "08.平方电压与乘积线性化.md",
+      "original_sha256": "d7e5a80a71957916732bb799274e8c69d5a35c213eda271e38a9e74897ffcb5a",
+      "export_path": "paper/08.平方电压与乘积线性化.md",
+      "export_sha256": "e5de70ba5a341c5cce3b38cf83d70b71527d4b61cbd2695226341a2f1e1f9113",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "09.通信商品流与最终MILP.md",
+      "original_sha256": "6179f9b38d4ffe94f34c491c5223084017a39e2f295f929b541995335b51e133",
+      "export_path": "paper/09.通信商品流与最终MILP.md",
+      "export_sha256": "53d8667ea7128dec3283eb505b527b8fd66b8cbaf906678672658fd53f8eca18",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "10.IEEE33节点算例逐段精读.md",
+      "original_sha256": "4b1faa7c44790ae514b9def920534a2592e3e39aeabc60dfb54c6827f99dcd1d",
+      "export_path": "paper/10.IEEE33节点算例逐段精读.md",
+      "export_sha256": "dd9ba54fe6bed71e7c696722a0e611c6adfaf18fbc795be5ba6715916303f98b",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "11.天气敏感性与方法对比.md",
+      "original_sha256": "6a10cc2b441908485b3e6dd094f809c4ea7c975de200e625c4f35b7f6084b53f",
+      "export_path": "paper/11.天气敏感性与方法对比.md",
+      "export_sha256": "061a4a5264b3892b85ef54c7a2b6155c58d7a144c683b0102f255db02fd66ed5",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "12.IEEE123节点算例与结论.md",
+      "original_sha256": "ac06031d79d4a7363aee3df4b095ae315ba603d15cd1f78e1cb270f071ecaef1",
+      "export_path": "paper/12.IEEE123节点算例与结论.md",
+      "export_sha256": "ea77f6d649277399e17938126ae02d2c12fbd407a0c8fe0016c732bf29bc8bf5",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "13.原文疑点与参考文献导读.md",
+      "original_sha256": "3a08e9d87a4e9a1ac1b0380eb97b290795a5c7ca5e67e5226c7257bb571bb812",
+      "export_path": "paper/13.原文疑点与参考文献导读.md",
+      "export_sha256": "2150688a5bae55416a5532b7f7966d1515d4d65b49071f8124b1b858555de0fb",
+      "kind": "paper",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "LP、MILP与MINLP.md",
+      "original_sha256": "c8af97d4e9bf04b097ddf54297217fa6757a3c492a8a2fac1e0d462ae8df828b",
+      "export_path": "knowledge/LP、MILP与MINLP.md",
+      "export_sha256": "5cffa3a277df58dd9acd43154d8204b62ef6334e0d3d0b3d9ade5146f310b312",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "二元与连续变量乘积的线性化.md",
+      "original_sha256": "ba92d20ac17f861094677bd9dec83ece28733a1c531db22810fdb554412ca074",
+      "export_path": "knowledge/二元与连续变量乘积的线性化.md",
+      "export_sha256": "fdc3aceae3ea88266ed5c55e926a93bbeb81e92ef4b2c1291034381dec67e053",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "二元变量与逻辑约束.md",
+      "original_sha256": "d14ecdfbb2027a5279b0a59c1264991cc2eb0220d9af44df99935841d1edec26",
+      "export_path": "knowledge/二元变量与逻辑约束.md",
+      "export_sha256": "85c9899de78a56e1594bc315538bd5b8fc14782bf205c22071f67da1eacd48e1",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "优化模型中的变量、参数与可行域.md",
+      "original_sha256": "4437951785e6709638bf1b0eea7838b28a715eff6aedd94b06bc301062669165",
+      "export_path": "knowledge/优化模型中的变量、参数与可行域.md",
+      "export_sha256": "3812895f55d08ffb339f5a369360254f3a9722e9e2b3d1c8fd2ca1c89d065b5a",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "凸优化与非凸问题.md",
+      "original_sha256": "ec1177203fe6be8e7445be1e588056f6f05696339ea1f7d3ca6188f74ec425ac",
+      "export_path": "knowledge/凸优化与非凸问题.md",
+      "export_sha256": "11ec22536a70fc949200256b25bf70145dccb26900000e57e51da825c078c0cc",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "变量替换、近似与松弛.md",
+      "original_sha256": "49bc29810cde0f5cf1417cf1afd22ac778d613e24a6aa962d6f6c082d236f226",
+      "export_path": "knowledge/变量替换、近似与松弛.md",
+      "export_sha256": "4ccc922838fd5e2ab88f2718b9bb8c728ea319cbb0bbd2738fd6323acabd410e",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "多目标优化与惩罚权重.md",
+      "original_sha256": "df06c9ac5230c8aeef82d0be37940a4957089c13d7e9c33a602c39eabcdae9cd",
+      "export_path": "knowledge/多目标优化与惩罚权重.md",
+      "export_sha256": "00b7d1a1e52dc582801d5216120920d2efbfc94c430dddcb4cc1980625f2904c",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "大常数M与条件约束.md",
+      "original_sha256": "4c31db914c85d3b010e63e348b81953609c9d584e4a86d2d6e3241e934fe3498",
+      "export_path": "knowledge/大常数M与条件约束.md",
+      "export_sha256": "29a2b7fb4ba81f337621be540d253fe520de6a2b83720479adc357976ed5b68e",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "指示约束与指示函数.md",
+      "original_sha256": "92f8305e5a2ec6624d9cafbcde0d45fa3dccd9faa33e04b47359f5fc11bbec83",
+      "export_path": "knowledge/指示约束与指示函数.md",
+      "export_sha256": "c12fd11b9a28363490598c45a194358025437c272f5104e2007576a14ec0fce6",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "数值尺度、容差与模型验证.md",
+      "original_sha256": "62a84f0ab4abd89dc8440ea633084c6c64f73c722928cdc1a6b06203f5a640de",
+      "export_path": "knowledge/数值尺度、容差与模型验证.md",
+      "export_sha256": "91a007a93651493eada0871c3871b28d5ed7d3c110de675b4eca643e1399d644",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "分支定界与MIPGap.md",
+      "original_sha256": "09d2f1ada49cad9eac34019bc428443adaccd5477c6dc0405dfff44fbcc22d1d",
+      "export_path": "knowledge/分支定界与MIPGap.md",
+      "export_sha256": "a7d6186d7f8aa1018bcfe77459c211cefa3441e830a51c9d6f031b3a3f238cba",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "单商品流与连通性建模.md",
+      "original_sha256": "20ae6b17711c217b29563b2032756c35f1706aa421ba3b1d823cc3cb0ceb2e32",
+      "export_path": "knowledge/单商品流与连通性建模.md",
+      "export_sha256": "22894a59e7828f7108766356f014a313fc1634de98fd10c035f50b3e77e87b9d",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "图论中的路径、树与森林.md",
+      "original_sha256": "3a90b0889dd15e6e9c565565e0ddadf6b2a7016122568bed1ae828c38fd046cf",
+      "export_path": "knowledge/图论中的路径、树与森林.md",
+      "export_sha256": "8107658ed1557c96b968e7e09358272655a08787aedc37a5aabb20c095d4c001",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "时间离散与时空网络.md",
+      "original_sha256": "f009509c90a64bc2502ed9df36e34af7ef14d0605497bd188a5c5446932de3c2",
+      "export_path": "knowledge/时间离散与时空网络.md",
+      "export_sha256": "879cc32e86f403812a4ff91dd8eab8ebe0a72465bc0b23d1492df745c4515ab7",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "网络流与流守恒.md",
+      "original_sha256": "229c1d387b3b7d67c62dad823c48e312ef83fbb1f11672ca82c064d1613fd68a",
+      "export_path": "knowledge/网络流与流守恒.md",
+      "export_sha256": "66b24b7c3316c2df68c76d4ab8db3738cbaa40191d25061f6785fe283d521ced",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "信息物理依赖与双层网络.md",
+      "original_sha256": "df358ef34e069bb536910a7ab9011ee12562b576a7cf7d365e215a6a601bca79",
+      "export_path": "knowledge/信息物理依赖与双层网络.md",
+      "export_sha256": "0d9e338372a7c6e19a2803254c43a50438083ebfbc59ea121ccc176ed25a0d68",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "储能SOC与跨时段能量约束.md",
+      "original_sha256": "d9fe195e8eb4aba09959a49cddc275dff2908e23e383432d404876dccf503c51",
+      "export_path": "knowledge/储能SOC与跨时段能量约束.md",
+      "export_sha256": "c122a59940c7065ddcdbde373f336b7e7cf4281e0b3dcefb396542059dd6bbe0",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "标幺值、平方电压与线性DistFlow.md",
+      "original_sha256": "c3c30a68cafa259c1fcf8be6ae11653a783dea82bf7540990c119177cd492891",
+      "export_path": "knowledge/标幺值、平方电压与线性DistFlow.md",
+      "export_sha256": "e2f1896ac5741dab67ad48996830bb3e3505781eb517d5d2084c8d7ddbdd385d",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "辐射状约束与多电源孤岛.md",
+      "original_sha256": "7e7cc52a1f5a113dc826530f4c4777e365a43ebe597e303bcd73e8832f673157",
+      "export_path": "knowledge/辐射状约束与多电源孤岛.md",
+      "export_sha256": "81f814cca48ec1606dc92dba59b46388131eb52b75453c8a27cb01e7e35449f2",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    },
+    {
+      "original_note_name": "配电网韧性与恢复指标.md",
+      "original_sha256": "e07559e6d0483c0ce06c003ebad60aef09772ebd6735b3aa8156e71ac3d1cf92",
+      "export_path": "knowledge/配电网韧性与恢复指标.md",
+      "export_sha256": "4425cf39ac628f45ecc1220a02265f49054faab5cb62a986dc1c41bf9e274740",
+      "kind": "knowledge",
+      "original_generation_time": null,
+      "original_generation_model": null
+    }
+  ],
+  "teaching_images": [
+    {
+      "filename": "论文阅读基础-大常数条件约束.png",
+      "export_path": "images/论文阅读基础-大常数条件约束.png",
+      "sha256": "300738eb3da2af8ed392e2bac67147c7b87ae4527e6d81f78fc1b347c9577172",
+      "bytes": 119309,
+      "provenance": "Original teaching diagram identified as self-drawn in the associated note; not a paper figure."
+    },
+    {
+      "filename": "论文阅读基础-单商品流教学示意.png",
+      "export_path": "images/论文阅读基础-单商品流教学示意.png",
+      "sha256": "50bafe28656296d1676b7039b68fa32b888b27eec91637ae90168f5a24e283a1",
+      "bytes": 96531,
+      "provenance": "Original teaching diagram identified as self-drawn in the associated note; not a paper figure."
+    },
+    {
+      "filename": "论文阅读基础-时空网络教学示意.png",
+      "export_path": "images/论文阅读基础-时空网络教学示意.png",
+      "sha256": "07f00db4224e99b3623c4ec41f845d4b2de9a3b2090baa7346e62bcc52bd89f5",
+      "bytes": 82943,
+      "provenance": "Original teaching diagram identified as self-drawn in the associated note; not a paper figure."
+    },
+    {
+      "filename": "论文阅读基础-树与边数反例.png",
+      "export_path": "images/论文阅读基础-树与边数反例.png",
+      "sha256": "1c8da2e4cf543945b28bac31efe91d6ff5246951ed979e32328538d2ed996b76",
+      "bytes": 80215,
+      "provenance": "Original teaching diagram identified as self-drawn in the associated note; not a paper figure."
+    }
+  ],
+  "omitted_images": [
+    {
+      "note": "paper/01.摘要引言与恢复框架.md",
+      "original_image_name": "无人机配电网韧性精读-图01-双层网络结构.jpg"
+    },
+    {
+      "note": "paper/08.平方电压与乘积线性化.md",
+      "original_image_name": "UAV配电网韧性-原式61至64-20261022.png"
+    },
+    {
+      "note": "paper/09.通信商品流与最终MILP.md",
+      "original_image_name": "UAV配电网韧性-原式66至74-20261022.png"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图02-IEEE33网络.jpg"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图03a-IEEE33风光出力.jpg"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图03b-IEEE33恢复负荷.jpg"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图04-IEEE33无人机SOC.jpg"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图05-IEEE33节点电压.jpg"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图06a-IEEE33储能功率.jpg"
+    },
+    {
+      "note": "paper/10.IEEE33节点算例逐段精读.md",
+      "original_image_name": "无人机配电网韧性精读-图06b-IEEE33储能SOC.jpg"
+    },
+    {
+      "note": "paper/11.天气敏感性与方法对比.md",
+      "original_image_name": "无人机配电网韧性精读-图07a-晴阴天风光出力.jpg"
+    },
+    {
+      "note": "paper/11.天气敏感性与方法对比.md",
+      "original_image_name": "无人机配电网韧性精读-图07b-晴阴天恢复负荷.jpg"
+    },
+    {
+      "note": "paper/11.天气敏感性与方法对比.md",
+      "original_image_name": "无人机配电网韧性精读-图08a-不同风况出力.jpg"
+    },
+    {
+      "note": "paper/11.天气敏感性与方法对比.md",
+      "original_image_name": "无人机配电网韧性精读-图08b-不同风况恢复负荷.jpg"
+    },
+    {
+      "note": "paper/11.天气敏感性与方法对比.md",
+      "original_image_name": "无人机配电网韧性精读-图09-IEEE33资源对比.jpg"
+    },
+    {
+      "note": "paper/12.IEEE123节点算例与结论.md",
+      "original_image_name": "无人机配电网韧性精读-图10-IEEE123网络.jpg"
+    },
+    {
+      "note": "paper/12.IEEE123节点算例与结论.md",
+      "original_image_name": "无人机配电网韧性精读-图11a-IEEE123风光出力.jpg"
+    },
+    {
+      "note": "paper/12.IEEE123节点算例与结论.md",
+      "original_image_name": "无人机配电网韧性精读-图11b-IEEE123恢复负荷.jpg"
+    },
+    {
+      "note": "paper/12.IEEE123节点算例与结论.md",
+      "original_image_name": "无人机配电网韧性精读-图12-IEEE123无人机SOC.jpg"
+    },
+    {
+      "note": "paper/12.IEEE123节点算例与结论.md",
+      "original_image_name": "无人机配电网韧性精读-图13a-原图与储能图题不符.jpg"
+    },
+    {
+      "note": "paper/12.IEEE123节点算例与结论.md",
+      "original_image_name": "无人机配电网韧性精读-图13b-IEEE123储能SOC.jpg"
+    }
+  ],
+  "out_of_scope_references": [
+    {
+      "note": "paper/00.总览与阅读顺序.md",
+      "title": "06MILP算法",
+      "target_title": "06MILP算法",
+      "heading": null
+    },
+    {
+      "note": "knowledge/LP、MILP与MINLP.md",
+      "title": "二阶锥规划与旋转锥",
+      "target_title": "二阶锥规划与旋转锥",
+      "heading": null
+    },
+    {
+      "note": "knowledge/二元变量与逻辑约束.md",
+      "title": "功率因数约束中的绝对值",
+      "target_title": "功率因数约束与有功无功可行域",
+      "heading": null
+    },
+    {
+      "note": "knowledge/二元变量与逻辑约束.md",
+      "title": "MESV 预部署的电源出力约束",
+      "target_title": "04.MESV预部署、辐射拓扑与鲁棒选址",
+      "heading": null
+    },
+    {
+      "note": "knowledge/二元变量与逻辑约束.md",
+      "title": "车到场且站点可通信的供能许可",
+      "target_title": "03.通信覆盖与卡车供能",
+      "heading": null
+    },
+    {
+      "note": "knowledge/优化模型中的变量、参数与可行域.md",
+      "title": "机巢选址与巡检目标",
+      "target_title": "03.飞行、充电与优化模型",
+      "heading": null
+    },
+    {
+      "note": "knowledge/多目标优化与惩罚权重.md",
+      "title": "遗传算法与 NSGA-II",
+      "target_title": "遗传算法与NSGA-II",
+      "heading": null
+    },
+    {
+      "note": "knowledge/多目标优化与惩罚权重.md",
+      "title": "恢复损失与部署费用",
+      "target_title": "07.潮流约束与恢复目标",
+      "heading": null
+    },
+    {
+      "note": "knowledge/指示约束与指示函数.md",
+      "title": "覆盖集合指示与通信开关",
+      "target_title": "07.UAV续航、通信开关与联合调度",
+      "heading": null
+    },
+    {
+      "note": "knowledge/数值尺度、容差与模型验证.md",
+      "title": "机巢覆盖与限时巡检的结果核对",
+      "target_title": "07.巡检验证、结论与证据边界",
+      "heading": null
+    },
+    {
+      "note": "knowledge/分支定界与MIPGap.md",
+      "title": "时间传播与子回路消除",
+      "target_title": "时间传播与子回路消除",
+      "heading": null
+    },
+    {
+      "note": "knowledge/分支定界与MIPGap.md",
+      "title": "精确算法：分支定界与分支切割",
+      "target_title": "03.精确算法：分支定界与分支切割",
+      "heading": null
+    },
+    {
+      "note": "knowledge/分支定界与MIPGap.md",
+      "title": "分支定价",
+      "target_title": "列生成与分支定价",
+      "heading": null
+    },
+    {
+      "note": "knowledge/单商品流与连通性建模.md",
+      "title": "通信约束下协同规划论文的虚拟流",
+      "target_title": "04.MESV预部署、辐射拓扑与鲁棒选址",
+      "heading": null
+    },
+    {
+      "note": "knowledge/单商品流与连通性建模.md",
+      "title": "虚拟流模型",
+      "target_title": "06.虚拟流与辐射拓扑",
+      "heading": null
+    },
+    {
+      "note": "knowledge/时间离散与时空网络.md",
+      "title": "储能车路径模型",
+      "target_title": "06.MESV时空路径与能量",
+      "heading": null
+    },
+    {
+      "note": "knowledge/时间离散与时空网络.md",
+      "title": "无人机与多功能应急车协同模型",
+      "target_title": "04.时空网络与车机协同",
+      "heading": null
+    },
+    {
+      "note": "knowledge/信息物理依赖与双层网络.md",
+      "title": "信息物理耦合与开关状态",
+      "target_title": "04.信息物理耦合与开关状态",
+      "heading": null
+    },
+    {
+      "note": "knowledge/信息物理依赖与双层网络.md",
+      "title": "灾后调度目标与移动电源时序",
+      "target_title": "09.灾后调度目标与移动电源时序",
+      "heading": null
+    },
+    {
+      "note": "knowledge/储能SOC与跨时段能量约束.md",
+      "title": "储能车能量递推",
+      "target_title": "06.MESV时空路径与能量",
+      "heading": null
+    },
+    {
+      "note": "knowledge/储能SOC与跨时段能量约束.md",
+      "title": "UAV 续航与换电状态",
+      "target_title": "07.UAV续航、通信开关与联合调度",
+      "heading": null
+    },
+    {
+      "note": "knowledge/储能SOC与跨时段能量约束.md",
+      "title": "单车—站点功率关联",
+      "target_title": "03.通信覆盖与卡车供能",
+      "heading": null
+    },
+    {
+      "note": "knowledge/储能SOC与跨时段能量约束.md",
+      "title": "无人机随车换电",
+      "target_title": "04.时空网络与车机协同",
+      "heading": null
+    },
+    {
+      "note": "knowledge/标幺值、平方电压与线性DistFlow.md",
+      "title": "二阶锥规划与旋转锥",
+      "target_title": "二阶锥规划与旋转锥",
+      "heading": null
+    },
+    {
+      "note": "knowledge/标幺值、平方电压与线性DistFlow.md",
+      "title": "通信约束下协同规划论文的潮流模型",
+      "target_title": "05.潮流与二阶锥松弛",
+      "heading": null
+    },
+    {
+      "note": "knowledge/标幺值、平方电压与线性DistFlow.md",
+      "title": "潮流约束",
+      "target_title": "07.潮流约束与恢复目标",
+      "heading": null
+    },
+    {
+      "note": "knowledge/标幺值、平方电压与线性DistFlow.md",
+      "title": "移动电源与无人机协同这篇",
+      "target_title": "08.配电网潮流与辐射拓扑",
+      "heading": null
+    },
+    {
+      "note": "knowledge/辐射状约束与多电源孤岛.md",
+      "title": "MESV 预部署中的边数与源节点集合",
+      "target_title": "04.MESV预部署、辐射拓扑与鲁棒选址",
+      "heading": null
+    },
+    {
+      "note": "knowledge/辐射状约束与多电源孤岛.md",
+      "title": "入度与虚拟需求",
+      "target_title": "06.虚拟流与辐射拓扑",
+      "heading": null
+    },
+    {
+      "note": "knowledge/辐射状约束与多电源孤岛.md",
+      "title": "潮流与辐射拓扑",
+      "target_title": "08.配电网潮流与辐射拓扑",
+      "heading": null
+    },
+    {
+      "note": "knowledge/配电网韧性与恢复指标.md",
+      "title": "33 节点仿真",
+      "target_title": "12.算例设置与33节点仿真",
+      "heading": null
+    }
+  ]
+}

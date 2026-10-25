@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Visualization"
+  short_description: "Design clear publication figures with Matplotlib"
+  default_prompt: "Use $scientific-visualization to design or review a faithful publication figure at its final output size."

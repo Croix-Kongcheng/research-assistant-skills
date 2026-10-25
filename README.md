@@ -2,20 +2,34 @@
 
 一组用于科研阅读和知识积累的中文代理技能。把论文读懂、把概念讲清，再将内容组织成可以持续复用的本地笔记。
 
-当前包含两个技能，后续可在 `skills/` 下继续增加其他科研工作流。
+当前包含三个技能，后续可在 `skills/` 下继续增加其他科研工作流。
 
 | 技能 | 用途 |
 |---|---|
-| [chc-vault-notes](skills/chc-vault-notes/SKILL.md) | 创建、改写和审校中文学习笔记，保留关键公式、图像、条件及来源，适配实际知识库结构。名称保留历史沿用，不要求使用 CHC 知识库。 |
+| [chc-vault-notes](skills/chc-vault-notes/SKILL.md) | 创建、改写和审校中文学习笔记；有助理解时联网查找有明确许可的图片，保存为本地附件并就近讲解。适配实际知识库结构，不要求使用 CHC 知识库。 |
 | [mineru-paper-reading](skills/mineru-paper-reading/SKILL.md) | 基于已有 MinerU 材料和源 PDF 完成全文精读、全部公式讲解、独立知识积累、续写和直接审校。 |
+| [scientific-visualization](skills/scientific-visualization/SKILL.md) | 根据图要说明的问题选择视觉编码、配色、注释和版式，用 Python / Matplotlib 生成并检查科研图。包含 Rougier 著作的提炼与改编，知识文本按 CC BY-NC-SA 4.0 使用。 |
 
-两个技能都可以单独使用；一起安装时可共享目录和写作偏好，但互相不是必需依赖。
+各技能都可以单独使用；两个笔记技能可共享目录和写作偏好，绘图技能可以按任务辅助它们。
+
+## 先看实际效果
+
+- [联网配图笔记](examples/web-image-note/README.md)：本地保存 Wikimedia Commons 的开放许可图，图旁说明作者、原始页面、许可及阅读方法。
+- [论文精读展示](examples/mineru-paper-reading/README.md)：14 篇既有精读笔记、20 篇独立知识笔记和 4 张原创教学图，保留公式讲解、疑点及相互链接。
+- [科研绘图展示](examples/scientific-visualization/README.md)：两张不同类型的原创图，附可重跑源码、数据及 PNG / SVG / PDF。图中数据为合成示例。
+
+![无人机路径规划绘图示例](examples/scientific-visualization/output/01_uav_route_tradeoff.png)
+
+![配电恢复与缺供电量绘图示例](examples/scientific-visualization/output/02_restoration_energy.png)
+
+真实论文展示使用的是 *Improving Resiliency of Cyber-Dependent Power Distribution Network Using UAVs*（[DOI](https://doi.org/10.1109/TSTE.2024.3424242)）。公开笔记来自已有精读产出，本次整理为可浏览示例。其 PDF 明示 IEEE 再分发限制，因此**公开仓库不含该论文的源 PDF、MinerU 全文转写、含原文的解析 JSON 或原论文截图**；[材料清单与本地使用说明](examples/mineru-paper-reading/source/README.md)记录了输入结构和取得材料后的用法。论文笔记中的原图位置有明确说明，未伪造图片附件。
 
 ## 使用前需要什么
 
 - 能加载 `SKILL.md` 的代理，例如 Codex；其他支持相同技能格式的工具也可以读取其中的工作流，调用方式按对应工具处理。
 - 能访问本次资料，并在目标工作区读写文件。核对论文公式、图片和版面时，还需要查看图片及源 PDF 页面的能力。
 - 使用论文精读技能时，提供**已经生成的 MinerU 解析目录**；建议同时提供源 PDF。本仓库不包含 MinerU 安装程序、解析服务或论文原文。
+- 联网配图需要代理具有搜索、下载和看图能力；不联网或没有合适图片时，继续完成笔记，并按需要自绘或说明缺口。执行 Python 绘图脚本需要对应环境中的 NumPy / Matplotlib 等依赖，技能本身不自动安装依赖。
 
 技能本体是 Markdown 指令和参考文件，不绑定作者电脑、某个盘符、Python 虚拟环境、API 密钥或特定模型。绘图、PDF 等其他技能可以辅助任务，但不是必须一起安装的依赖。
 
@@ -27,7 +41,7 @@
 
 ```text
 请使用 $skill-installer，从 https://github.com/Croix-Kongcheng/research-assistant-skills
-安装 skills/chc-vault-notes 和 skills/mineru-paper-reading。
+安装 skills/chc-vault-notes、skills/mineru-paper-reading 和 skills/scientific-visualization。
 ```
 
 也可以下载或克隆本仓库，将需要的**完整技能文件夹**复制到 Codex 能发现的技能位置。例如当前项目的 `.agents/skills/`：
@@ -39,7 +53,10 @@
       ├─ chc-vault-notes/
       │  ├─ SKILL.md
       │  └─ ...
-      └─ mineru-paper-reading/
+      ├─ mineru-paper-reading/
+      │  ├─ SKILL.md
+      │  └─ ...
+      └─ scientific-visualization/
          ├─ SKILL.md
          └─ ...
 ```
@@ -62,6 +79,7 @@
 资料位置：<本次资料路径>
 保存到：<目标文件或目录>
 写法：简洁自然，保留关键公式、图片、条件和操作步骤。
+合适的话联网找有明确许可的解释图，下载到附件目录，图旁说明看哪里及图片来源。
 ```
 
 ### 全文精读论文
@@ -103,6 +121,18 @@ MinerU 解析目录：<材料目录>
 
 详细字段和路径解析规则见 [工作区配置](docs/configuration.md)。配置只在使用者自己的工作区生效，不需要修改技能文件。
 
+### 绘制科研图
+
+```text
+请用 $scientific-visualization，把我的数据画成适合论文阅读的图。
+数据：<文件位置及各列含义>
+想说明：<比较、趋势或机制>
+用途：<论文、汇报或学习笔记；有目标尺寸时注明>
+输出：PNG 和可编辑的 SVG，并保留生成脚本。
+```
+
+没有真实数据而只想看样式时，明确要求合成示例，并在图及数据文件里标注。
+
 ## 输出约定
 
 - 普通知识按概念和主题复用；论文专题按本篇实际内容组织，并保留总览和前后篇导航。
@@ -118,7 +148,7 @@ MinerU 解析目录：<材料目录>
 ```text
 skills/             可单独安装的技能
 docs/               配置与验证说明
-examples/           可选的公开配置示例
+examples/           配置、联网配图、论文笔记与科研绘图展示
 scripts/            仓库结构和可移植性校验
 ```
 
@@ -133,4 +163,4 @@ python scripts/validate_skills.py
 
 ## 许可
 
-本仓库原创技能和文档采用 [MIT License](LICENSE)。使用者提供的论文、图片、教材和其他材料仍遵循各自的许可与引用要求。
+除另有标注的文件外，本仓库原创技能和文档采用 [MIT License](LICENSE)。`scientific-visualization` 的改编知识文本采用 CC BY-NC-SA 4.0，其代码使用单独声明的 BSD 许可；联网配图示例中的第三方图保留原许可。详见 [第三方来源与许可](THIRD_PARTY_NOTICES.md)。论文及其他外部材料的权利不因本仓库的 MIT 许可而改变。

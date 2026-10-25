@@ -1,0 +1,15 @@
+Original example figures, synthetic input/output data, parameters and README
+Copyright (c) 2026 Croix-Kongcheng and contributors.
+
+These original materials are licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+Legal terms: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribute: Croix-Kongcheng / research-assistant-skills
+Source: https://github.com/Croix-Kongcheng/research-assistant-skills/tree/main/examples/scientific-visualization
+Retain the source and license, and indicate modifications when sharing adaptations.
+These are synthetic teaching examples, not measured or validated research results.
+
+The Python code in this directory is instead licensed under BSD-2-Clause;
+see LICENSE-CODE and the script header. Book-derived skill knowledge text is
+licensed separately under CC BY-NC-SA 4.0, outside this example directory.
