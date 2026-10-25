@@ -1,0 +1,15 @@
+version: 1
+vault_root: .
+paths:
+  notes: 笔记
+  papers: 论文精读
+  knowledge: 知识积累
+  attachments: 附件
+  knowledge_index: 知识索引.md
+preferences:
+  language: zh-CN
+  style: natural
+  reader_background: 相近专业本科背景，交叉方法需要解释
+  timezone: local
+  link_style: wikilink
+topics: {}
