@@ -4,10 +4,12 @@
 
 ## 修改现有技能
 
-1. 在相应技能内更新规则；共同的工作区约定先修改 `docs/configuration.md`，再同步到两个现有技能各自的 `references/workspace-config.md`。
+1. 在相应技能内更新规则；共同的工作区约定先修改 `docs/configuration.md`，再同步到使用此约定的笔记技能各自的 `references/workspace-config.md`。中文表达的详细规则在 `stop-ai-slop-zh` 中独立维护，两个主技能保留接入顺序与内容保护要求，避免复制多套文风规则。
 2. 对照原有能力检查是否误删段落、公式、图片、导航、续写或审校要求。普通笔记的精炼默认值不能替代用户要求的全文精读范围。
 3. 执行 `python scripts/validate_skills.py`；新增脚本还要实际运行。结构校验通过后，按改动选择一个隔离工作区中的真实使用情境检查行为。
 4. 提交清楚的变更说明，记录实际验证范围，再推送或提出 Pull Request。
+
+两个笔记主技能应在内容整理和事实核对后默认读取可用的 `stop-ai-slop-zh`，用户明确不润色时跳过。缺少该技能时继续按主技能已有规则完成，不强制安装、不阻断，也不虚报调用。修改这部分时，分别检查可用、缺少与用户跳过的行为，并核对技术条件、公式、引用、图片、链接、导航和元数据未被表达编辑破坏；只记录实际执行的检查。
 
 不要把个人配置、电脑绝对路径、未经同意的私有笔记、认证信息或未获再分发许可的论文原件混入公开技能。公开示例放在 `examples/`，与技能运行资源分开；实际笔记须经所有者同意，整理相对链接、图片、来源和导出信息，并保留科学结论的证据边界。第三方图和改编材料保留各自许可，不能统一改标 MIT。
 
@@ -25,7 +27,7 @@
 ```bash
 git pull --ff-only
 python scripts/validate_skills.py
-git add skills docs examples README.md CONTRIBUTING.md scripts
+git add skills docs examples README.md CONTRIBUTING.md THIRD_PARTY_NOTICES.md scripts
 git commit -m "Describe the concrete skill change"
 git push
 ```

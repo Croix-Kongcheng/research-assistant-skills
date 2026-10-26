@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文科研表达精修"
+  short_description: "精简中文科研与知识笔记的套话和重复表达，保留技术条件与证据强度"
+  default_prompt: "请用 $stop-ai-slop-zh 润色这份中文笔记，删去套话、重复解释和无关评价，保留必要讲解、技术内容、适用条件、证据强度、引用与笔记结构，只在必要时说明主要修改。"

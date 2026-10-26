@@ -2,15 +2,16 @@
 
 一组用于科研阅读和知识积累的中文代理技能。把论文读懂、把概念讲清，再将内容组织成可以持续复用的本地笔记。
 
-当前包含三个技能，后续可在 `skills/` 下继续增加其他科研工作流。
+当前包含四个技能，后续可在 `skills/` 下继续增加其他科研工作流。
 
 | 技能 | 用途 |
 |---|---|
 | [chc-vault-notes](skills/chc-vault-notes/SKILL.md) | 创建、改写和审校中文学习笔记；有助理解时联网查找有明确许可的图片，保存为本地附件并就近讲解。适配实际知识库结构，不要求使用 CHC 知识库。 |
 | [mineru-paper-reading](skills/mineru-paper-reading/SKILL.md) | 基于已有 MinerU 材料和源 PDF 完成全文精读、全部公式讲解、独立知识积累、续写和直接审校。 |
 | [scientific-visualization](skills/scientific-visualization/SKILL.md) | 根据图要说明的问题选择视觉编码、配色、注释和版式，用 Python / Matplotlib 生成并检查科研图。包含 Rougier 著作的提炼与改编，知识文本按 CC BY-NC-SA 4.0 使用。 |
+| [stop-ai-slop-zh](skills/stop-ai-slop-zh/SKILL.md) | 精简中文科研笔记中的套话、重复解释和无关评价，保留技术内容、适用条件及证据强度。基于 VincentOld/stop-slop-zh 的科研保真改编，也可独立润色已有文字。 |
 
-各技能都可以单独使用；两个笔记技能可共享目录和写作偏好，绘图技能可以按任务辅助它们。
+各技能都可以单独使用；两个笔记技能可共享目录和写作偏好，绘图技能可以按任务辅助它们。详细文风规则独立放在 `stop-ai-slop-zh` 中维护。
 
 ## 先看实际效果
 
@@ -41,8 +42,11 @@
 
 ```text
 请使用 $skill-installer，从 https://github.com/Croix-Kongcheng/research-assistant-skills
-安装 skills/chc-vault-notes、skills/mineru-paper-reading 和 skills/scientific-visualization。
+安装 skills/chc-vault-notes、skills/mineru-paper-reading、skills/scientific-visualization
+和 skills/stop-ai-slop-zh。
 ```
+
+按需要安装其中一个或几个即可，不要求安装整套。
 
 也可以下载或克隆本仓库，将需要的**完整技能文件夹**复制到 Codex 能发现的技能位置。例如当前项目的 `.agents/skills/`：
 
@@ -56,7 +60,10 @@
       ├─ mineru-paper-reading/
       │  ├─ SKILL.md
       │  └─ ...
-      └─ scientific-visualization/
+      ├─ scientific-visualization/
+      │  ├─ SKILL.md
+      │  └─ ...
+      └─ stop-ai-slop-zh/
          ├─ SKILL.md
          └─ ...
 ```
@@ -113,6 +120,22 @@ MinerU 解析目录：<材料目录>
 对照源 PDF 检查正文、公式、图表和疑点，修正确定错误、补齐缺口并修复链接。
 ```
 
+### 精简已有文字
+
+两个笔记技能完成内容整理和事实核对后，默认读取环境中可用的 `stop-ai-slop-zh` 及相关参考，精简正文表达，再检查技术信息与笔记结构是否保留。用户可以明确要求“只整理内容，不做文风润色”。没有安装该技能时，按主技能已有写作规则完成任务，不中断、不自动安装，也不声称已经调用。
+
+单独改写已有文字时可以发送：
+
+```text
+请用 $stop-ai-slop-zh 润色 <笔记位置或粘贴的文字>。
+只处理表达，删掉套话、重复解释和无关评价。
+保留原意、技术术语、公式、代码、数值、单位、条件、证据强度和未解决问题，
+以及引用、链接、图片、导航、元数据和必要的解释。
+不要补造数据、案例或个人经历；给出改写稿和影响理解的主要改动。
+```
+
+这套改编用于编辑中文表达，不检测文本作者身份，也不保证绕过 AI 检测。五维评分仅作可选的主观参考，不以分数替代科学内容核对。
+
 ## 适配自己的目录与写法
 
 直接在对话中说明即可；经常使用时，也可以将 [配置示例](examples/research-skills.example.yaml) 复制到自己的目标工作区，命名为 `research-skills.yaml`。
@@ -139,6 +162,7 @@ MinerU 解析目录：<材料目录>
 - 论文精读及知识笔记都主动使用有助理解的图，默认少用 Mermaid。先复用原图或附件，操作说明用真实截图；本地不足且允许联网时核验来源与许可后取图。需要自绘时优先调用可用且适合的 `scientific-visualization`，实际导出、看图并就近嵌入。Mermaid 只在明确要求或简单流程 / 时序确有优势时少量使用；不要求额外安装技能，不设图数或调用次数，不用装饰图代替讲解。
 - 正文实质段落、全部公式与符号、关键图表、算法、假设和限制都属于论文精读范围。篇数服从内容，不固定模板和数量。
 - 原文事实、解释补充、自绘示意、假设数据和待核实疑点要能区分。缺少源 PDF 或看图能力时，明确哪些部分尚未完成原文核验。
+- 普通笔记与论文笔记默认精简套话和重复内容；技术推导、独立条件、必要设问与结构继续保留。表达润色不替代全文精读，也不加强尚未确认的结论。
 - 每篇新笔记最底部记录真实生成时间、时区和实际模型；更新旧笔记保留历史信息，并另记更新时间与模型。
 - 文件和链接检查、全文理解、作者代码复现及真实实验验证分别报告，只声明实际做过的工作。
 
@@ -164,4 +188,4 @@ python scripts/validate_skills.py
 
 ## 许可
 
-除另有标注的文件外，本仓库原创技能和文档采用 [MIT License](LICENSE)。`scientific-visualization` 的改编知识文本采用 CC BY-NC-SA 4.0，其代码使用单独声明的 BSD 许可；联网配图示例中的第三方图保留原许可。详见 [第三方来源与许可](THIRD_PARTY_NOTICES.md)。论文及其他外部材料的权利不因本仓库的 MIT 许可而改变。
+除另有标注的文件外，本仓库原创技能和文档采用 [MIT License](LICENSE)。`stop-ai-slop-zh` 保留上游 MIT 许可与文森（Wen Sen）署名；`scientific-visualization` 的改编知识文本采用 CC BY-NC-SA 4.0，其代码使用单独声明的 BSD 许可；联网配图示例中的第三方图保留原许可。详见 [第三方来源与许可](THIRD_PARTY_NOTICES.md)。论文及其他外部材料的权利不因本仓库的 MIT 许可而改变。

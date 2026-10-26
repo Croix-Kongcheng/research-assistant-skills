@@ -10,6 +10,12 @@
 
 `examples/scientific-visualization/` 为本仓库原创、合成数据示例，适用该目录说明；不代表原书插图或任何论文的实验结果。
 
+## Stop AI Slop 中文科研笔记改编
+
+`skills/stop-ai-slop-zh/` 基于 [VincentOld/stop-slop-zh](https://github.com/VincentOld/stop-slop-zh)，来源固定于提交 [`42305b6ff281eefd9168a2ccdc3ab75675e25ab1`](https://github.com/VincentOld/stop-slop-zh/tree/42305b6ff281eefd9168a2ccdc3ab75675e25ab1)。上游采用 MIT 许可，版权署名为 Copyright (c) 2026 文森（Wen Sen）；技能目录内保留[独立许可](skills/stop-ai-slop-zh/LICENSE)。
+
+本仓库发布的是适合科研笔记的改编版，保留上游来源与署名，不冒充上游原版。改编侧重删除套话、重复解释和无关评价，同时保护技术术语、公式、数据、条件、证据边界、引用和笔记结构。它是表达编辑规则，不是 AI 文本检测器，不保证绕过 AI 检测；主观文风评分不能证明作者身份或科学结论正确。
+
 ## 联网配图
 
 `examples/web-image-note/` 的外部图像保留原作者与许可；具体来源、文件哈希和改动信息见示例笔记及其来源记录。MIT 许可不覆盖这些第三方图片。
