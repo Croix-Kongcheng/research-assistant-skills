@@ -1,4 +1,4 @@
 interface:
   display_name: "MinerU 论文精读与知识积累"
   short_description: "适配实际知识库与读者背景，完成全文公式精读、独立知识积累、续写和直接审校"
-  default_prompt: "请用 $mineru-paper-reading 精读我提供的 MinerU 解析材料，按我的工作区、课题与读者背景完成整套论文笔记和可复用知识笔记。"
+  default_prompt: "请用 $mineru-paper-reading 按我的工作区、课题和读者背景完成全文精读，知识点先查重并优先引用已有笔记，主动复用、联网获取或绘制解释图并实际嵌入。"
